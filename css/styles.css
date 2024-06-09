@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
  @font-face {
@@ -103,3 +104,107 @@
 
     }
 }
+=======
+@font-face {
+  font-family: "din condensed";
+  src: url("../din-condensed/DINCondensed-Regular.ttf");
+}
+body {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+
+.card {
+  min-width: 300px;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.3s;
+  opacity: 1;
+  z-index: 1;
+}
+.card:nth-child(1) {
+  background: url("../images/fox.jpg") no-repeat center center/cover;
+}
+.card:nth-child(2) {
+  background: url("../images/whale.jpg") no-repeat center center/cover;
+}
+.card:nth-child(3) {
+  background: url("../images/chimpanzee.jpg") no-repeat center center/cover;
+}
+.card:nth-child(4) {
+  background: url("../images/deer.jpg") no-repeat center center/cover;
+}
+
+.card-content {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 120px;
+  width: 100%;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  z-index: 2;
+  transition: transform 0.3s;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card:hover::before {
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: sepia(100%);
+  z-index: 1;
+  content: "";
+  transition: opacity 0.3s;
+}
+
+.card:hover .card-content {
+  transform: translateY(-20px);
+}
+
+.title {
+  font-family: DIN Condensed;
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 38px;
+  text-align: left;
+}
+
+.subtitle {
+  font-family: Poppins;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16.02px;
+  text-align: left;
+  color: #777879;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    flex-direction: column;
+    align-items: start;
+  }
+}
+>>>>>>> 8d73333 (Add Ui)
